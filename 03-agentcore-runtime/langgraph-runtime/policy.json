@@ -1,0 +1,142 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "ECRImageAccess",
+            "Effect": "Allow",
+            "Action": [
+                "ecr:BatchGetImage",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:GetAuthorizationToken"
+            ],
+            "Resource": [
+                "REPO_ARN"
+            ]        
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:DescribeLogStreams",
+                "logs:CreateLogGroup"
+            ],
+            "Resource": [
+                "arn:aws:logs:REGION:ACCOUNT_ID:log-group:/aws/bedrock-agentcore/runtimes/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:DescribeLogGroups"
+            ],
+            "Resource": [
+                "arn:aws:logs:REGION:ACCOUNT_ID:log-group:*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": [
+                "arn:aws:logs:REGION:ACCOUNT_ID:log-group:/aws/bedrock-agentcore/runtimes/*:log-stream:*"
+            ]
+        },
+        {
+            "Sid": "ECRTokenAccess",
+            "Effect": "Allow",
+            "Action": [
+                "ecr:GetAuthorizationToken"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow", 
+            "Action": [ 
+                "xray:PutTraceSegments", 
+                "xray:PutTelemetryRecords", 
+                "xray:GetSamplingRules", 
+                "xray:GetSamplingTargets"
+            ],
+            "Resource": [ "*" ] 
+        },
+        {
+            "Effect": "Allow",
+            "Resource": "*",
+            "Action": "cloudwatch:PutMetricData",
+            "Condition": {
+                "StringEquals": {
+                    "cloudwatch:namespace": "bedrock-agentcore"
+                }
+            }
+        },
+        {
+            "Sid": "GetAgentAccessToken",
+            "Effect": "Allow",
+            "Action": [
+                "bedrock-agentcore:GetWorkloadAccessToken",
+                "bedrock-agentcore:GetWorkloadAccessTokenForJWT",
+                "bedrock-agentcore:GetWorkloadAccessTokenForUserId"
+            ],
+            "Resource": [
+                "arn:aws:bedrock-agentcore:REGION:ACCOUNT_ID:workload-identity-directory/default",
+                "arn:aws:bedrock-agentcore:REGION:ACCOUNT_ID:workload-identity-directory/default/workload-identity/agentName-*"
+            ]
+        },
+        {
+            "Sid": "BedrockModelInvocation", 
+            "Effect": "Allow", 
+            "Action": [ 
+                "bedrock:InvokeModel", 
+                "bedrock:InvokeModelWithResponseStream",
+                "bedrock:ApplyGuardrail"
+            ], 
+            "Resource":[
+                		"arn:aws:bedrock:*::foundation-model/*",
+				        "arn:aws:bedrock:REGION:ACCOUNT_ID:*"
+            ]
+            
+        },
+        {
+            "Sid": "Retrieve",
+            "Effect": "Allow",
+            "Action": [
+                "bedrock:Retrieve"
+            ],
+            "Resource": [
+                "arn:aws:bedrock:REGION:ACCOUNT_ID:knowledge-base/*"
+            ]
+        },
+        {
+            "Sid": "RetrieveAndGenerate",
+            "Effect": "Allow",
+            "Action": [
+                "bedrock:RetrieveAndGenerate"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "DescribeParameters",
+            "Effect": "Allow",
+            "Action": [
+                "ssm:DescribeParameters"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "GetParameter",
+            "Effect": "Allow",
+            "Action": [
+                "ssm:GetParameter"
+            ],
+            "Resource": [
+                "arn:aws:ssm:REGION:ACCOUNT_ID:parameter/*"
+            ]
+        }
+
+    ]
+}

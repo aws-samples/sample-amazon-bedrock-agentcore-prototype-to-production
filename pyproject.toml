@@ -1,0 +1,50 @@
+[project]
+name = "workshop-agentcore"
+version = "0.1.0"
+description = "Amazon Bedrock AgentCore Workshop"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "boto3",
+    "botocore",
+    "termcolor==2.5.0",
+    "black==24.10.0",
+    "opensearch-py==2.7.1",
+    "pydantic==2.10.2",
+    "rich==13.9.4",
+    "matplotlib==3.9.2",
+    "ipython==8.29.0",
+    "pyyaml",
+    "retrying",
+    "streamlit>=1.28.0",
+    "pickleshare",
+    "jupyter",
+    "notebook",
+    "jupyterlab",
+    "bedrock-agentcore",
+    "bedrock-agentcore-starter-toolkit",
+    "mcp",
+    "strands-agents-tools",
+    "strands-agents"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "flake8"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=6.0",
+    "pytest-cov",
+    "flake8"
+]

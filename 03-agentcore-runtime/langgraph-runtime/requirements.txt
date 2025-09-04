@@ -1,0 +1,15 @@
+awscli
+boto3
+botocore
+langchain==0.3.26
+langchain_aws==0.2.27
+langgraph>=0.3.5,<0.4.0
+langchain-community==0.3.26
+langgraph-swarm==0.0.11
+certifi
+langchain-mcp-adapters
+mcp
+langfuse
+bedrock-agentcore
+bedrock-agentcore-starter-toolkit
+docker

@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.venv
+venv
+
+backup.ipynb
+
+.kiro
+ Bedrock AgentCore configuration files
+*.bedrock_agentcore.yaml
+*Dockerfile
