@@ -42,7 +42,7 @@ for logger_name in loggers:
 app = BedrockAgentCoreApp()
 
 
-modelID="us.anthropic.claude-3-5-haiku-20241022-v1:0"
+modelID="us.anthropic.claude-3-7-sonnet-20250219-v1:0"
 
 #TODO: get the kb id from AWS SSM
 def setup_knowledge_base():
