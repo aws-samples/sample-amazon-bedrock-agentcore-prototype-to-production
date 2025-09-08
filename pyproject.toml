@@ -11,7 +11,6 @@ dependencies = [
     "black==24.10.0",
     "opensearch-py==2.7.1",
     "pydantic==2.10.2",
-    "rich==13.9.4",
     "matplotlib==3.9.2",
     "ipython==8.29.0",
     "pyyaml",
@@ -24,9 +23,9 @@ dependencies = [
     "bedrock-agentcore",
     "bedrock-agentcore-starter-toolkit",
     "mcp",
-    "strands-agents-tools",
     "strands-agents",
     "ipykernel>=6.30.1",
+    "strands-agents-tools==0.2.6",
 ]
 
 [project.optional-dependencies]
