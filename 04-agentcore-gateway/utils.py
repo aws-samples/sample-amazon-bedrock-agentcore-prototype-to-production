@@ -359,6 +359,7 @@ def create_agentcore_role(agent_name):
         assume_role_policy_document
     )
     role_policy_document = json.dumps(role_policy)
+    
     # Create IAM Role for the Lambda function
     try:
         agentcore_iam_role = iam_client.create_role(
@@ -369,26 +370,9 @@ def create_agentcore_role(agent_name):
         # Pause to make sure role is created
         time.sleep(10)
     except iam_client.exceptions.EntityAlreadyExistsException:
-        print("Role already exists -- deleting and creating it again")
-        policies = iam_client.list_role_policies(
-            RoleName=agentcore_role_name,
-            MaxItems=100
-        )
-        print("policies:", policies)
-        for policy_name in policies['PolicyNames']:
-            iam_client.delete_role_policy(
-                RoleName=agentcore_role_name,
-                PolicyName=policy_name
-            )
-        print(f"deleting {agentcore_role_name}")
-        iam_client.delete_role(
-            RoleName=agentcore_role_name
-        )
-        print(f"recreating {agentcore_role_name}")
-        agentcore_iam_role = iam_client.create_role(
-            RoleName=agentcore_role_name,
-            AssumeRolePolicyDocument=assume_role_policy_document_json
-        )
+        print("Role already exists")
+        return iam_client.get_role(RoleName=agentcore_role_name)
+        
 
     # Attach the AWSLambdaBasicExecutionRole policy
     print(f"attaching role policy {agentcore_role_name}")
@@ -464,26 +448,8 @@ def create_agentcore_gateway_role(gateway_name):
         # Pause to make sure role is created
         time.sleep(10)
     except iam_client.exceptions.EntityAlreadyExistsException:
-        print("Role already exists -- deleting and creating it again")
-        policies = iam_client.list_role_policies(
-            RoleName=agentcore_gateway_role_name,
-            MaxItems=100
-        )
-        print("policies:", policies)
-        for policy_name in policies['PolicyNames']:
-            iam_client.delete_role_policy(
-                RoleName=agentcore_gateway_role_name,
-                PolicyName=policy_name
-            )
-        print(f"deleting {agentcore_gateway_role_name}")
-        iam_client.delete_role(
-            RoleName=agentcore_gateway_role_name
-        )
-        print(f"recreating {agentcore_gateway_role_name}")
-        agentcore_iam_role = iam_client.create_role(
-            RoleName=agentcore_gateway_role_name,
-            AssumeRolePolicyDocument=assume_role_policy_document_json
-        )
+        print("Role already exists ")
+        return iam_client.get_role(RoleName=agentcore_gateway_role_name)
 
     # Attach the AWSLambdaBasicExecutionRole policy
     print(f"attaching role policy {agentcore_gateway_role_name}")
@@ -561,26 +527,8 @@ def create_agentcore_gateway_role_s3_smithy(gateway_name):
         # Pause to make sure role is created
         time.sleep(10)
     except iam_client.exceptions.EntityAlreadyExistsException:
-        print("Role already exists -- deleting and creating it again")
-        policies = iam_client.list_role_policies(
-            RoleName=agentcore_gateway_role_name,
-            MaxItems=100
-        )
-        print("policies:", policies)
-        for policy_name in policies['PolicyNames']:
-            iam_client.delete_role_policy(
-                RoleName=agentcore_gateway_role_name,
-                PolicyName=policy_name
-            )
-        print(f"deleting {agentcore_gateway_role_name}")
-        iam_client.delete_role(
-            RoleName=agentcore_gateway_role_name
-        )
-        print(f"recreating {agentcore_gateway_role_name}")
-        agentcore_iam_role = iam_client.create_role(
-            RoleName=agentcore_gateway_role_name,
-            AssumeRolePolicyDocument=assume_role_policy_document_json
-        )
+        print("Role already exists")
+        return iam_client.get_role(RoleName=agentcore_gateway_role_name)
 
     # Attach the AWSLambdaBasicExecutionRole policy
     print(f"attaching role policy {agentcore_gateway_role_name}")
