@@ -33,7 +33,7 @@ for logger_name in loggers:
     logger.addHandler(handler)
 
 
-modelID="anthropic.claude-3-5-haiku-20241022-v1:0"
+modelID="us.anthropic.claude-3-7-sonnet-20250219-v1:0"
 
 # get the kb id from AWS SSM
 
