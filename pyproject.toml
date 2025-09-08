@@ -25,7 +25,8 @@ dependencies = [
     "bedrock-agentcore-starter-toolkit",
     "mcp",
     "strands-agents-tools",
-    "strands-agents"
+    "strands-agents",
+    "ipykernel>=6.30.1",
 ]
 
 [project.optional-dependencies]
