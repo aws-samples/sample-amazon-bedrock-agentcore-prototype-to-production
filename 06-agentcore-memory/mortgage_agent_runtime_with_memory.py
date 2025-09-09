@@ -49,7 +49,7 @@ from mortgage_agent_memory_hook import MortgageAssistantSupervisorMemoryHook, Mo
 
 
 app = BedrockAgentCoreApp()
-modelID="us.anthropic.claude-3-5-haiku-20241022-v1:0"
+modelID="us.anthropic.claude-3-7-sonnet-20250219-v1:0"
 
 # 4. Create Agent for General Mortgage Questions
 #We will be creating an agent to answer general mortage questions providing it the **retrieve** tool to access the Knowledge Base created earlier.
