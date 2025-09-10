@@ -22,9 +22,8 @@ You will be hosting the **Credit check MCP Server** . The **supervisor agent** r
 
     c. Generate Oauth inbound token and invoke MCP exposed through Gateway URL from Strands MCP client
 
-2. In the above step we have created agentcore gateway and invoked it through MCP client. Let's integrate MCP into Mortgage Agent multi agent workflow created as part of agentcore runtime (03-agentcore-runtime)
-
-    a. Run notebook deploy.ipynb. This creates agentcore runtime with agentcore gateway MCP added. Checks the status of the runtime and also invokes the runtime
+    d. In the above step we have created agentcore gateway and invoked it through MCP client. Let's integrate MCP into Mortgage Agent multi agent workflow created as part of 
+       agentcore runtime (03-agentcore-runtime). The last section creates agentcore runtime with agentcore gateway MCP added. Checks the status of the runtime and also invokes the runtime
 
 
 
