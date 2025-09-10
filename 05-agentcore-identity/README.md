@@ -77,4 +77,5 @@ The AgentCore Identity workflow consists of the following steps:
 
 This workflow is built on several key technical principles that distinguish AgentCore Credential Provider from traditional authentication approaches. The service implements zero trust security, where every request is validated regardless of source or previous trust relationships. It uses delegation-based authentication rather than impersonation, ensuring that agents always authenticate as themselves while carrying user context. The service is MCP (Model Context Protocol) compliant, supporting standard protocols for agent-to-tool communication. Finally, it provides cross-platform support, enabling agents to operate across AWS, other cloud providers, and on-premise environments while maintaining consistent security standards. 
 
-Let's explore Inbound and Outbound Auth...
+## Getting Started
+Get started in [InboundAuth/inbound_auth_runtime.ipynb](./InboundAuth/inbound_auth_runtime.ipynb).
