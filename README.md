@@ -39,5 +39,5 @@ The workshop is divided into labs, where each one builds upon the previous labs 
 
 ## Architecture:
 
-<img src="./images/agentcore-full-arch.png" alt="AgentCore Architecture"/>
+<img src="./images/agentcore.png" alt="AgentCore Architecture"/>
 
