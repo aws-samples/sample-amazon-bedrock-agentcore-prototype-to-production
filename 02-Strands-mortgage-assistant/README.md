@@ -19,5 +19,4 @@ Run the below commands and examine the output
 
 ```
 uv run mortgage_agent.py --prompt "What are the benefits of a 15-year mortgage?"
-
 ```
