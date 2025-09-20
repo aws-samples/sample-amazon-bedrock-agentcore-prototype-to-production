@@ -56,6 +56,7 @@ cover/
 
 # Jupyter Notebook
 .ipynb_checkpoints/
+*.ipynb_checkpoints/
 backup.ipynb
 
 # IDEs
