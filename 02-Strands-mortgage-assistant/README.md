@@ -18,11 +18,6 @@ The prototype has a supervisor agent which co-ordinates the task with the 3 sub-
 Run the below commands and examine the output
 
 ```
-uv pip install -r requirements.txt
-python mortgage_agent.py --prompt "What are the benefits of a 15-year mortgage?"
+uv run mortgage_agent.py --prompt "What are the benefits of a 15-year mortgage?"
 
 ```
-
-
-
-
