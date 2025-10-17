@@ -237,6 +237,16 @@ class KnowledgeBasesForAmazonBedrock:
                     "Resource": [
                         f"arn:aws:bedrock:{self.region_name}::foundation-model/{embedding_model}"
                     ]
+                },
+                {
+                    "Sid": "3PModelAccess", 
+                    "Effect": "Allow",
+                    "Action": [
+                        "aws-marketplace:Subscribe",
+                        "aws-marketplace:Unsubscribe",
+                        "aws-marketplace:ViewSubscriptions"
+                    ],
+                    "Resource": "*"
                 }
             ]
         }
