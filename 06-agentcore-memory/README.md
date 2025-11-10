@@ -40,5 +40,22 @@ AgentCore Memory supports four strategy types:
 - **User Preference Memory**: Tracks user-specific preferences and settings
 - **Custom Memory**: Allows customization of extraction and consolidation logic
 
+## AgentCore Memory Integration
+This workshop demonstrates two approaches for integrating AgentCore Memory with Strands Agents:
+
+**Option 1: Using Strands Agents Hooks**
+
+This approach leverages [Strands Agents hooks](https://strandsagents.com/latest/documentation/docs/user-guide/concepts/agents/hooks/) to give you fine-grained control over memory store and retrieval
+operations. This is ideal if you need custom logic or specific behavior for your memory management, or want to learn exactly how the integration with AgentCore Memory works.
+
+**Option 2: Using AgentCore Memory Session Manager**
+
+This approach uses the [AgentCore Memory Session Manager](https://strandsagents.com/latest/documentation/docs/community/session-managers/agentcore-memory/), which provides a sensible default implementation
+that's quick to set up and easy to use.
+
 ## Getting Started
-Learn how to configure AgentCore Memory for the Mortgage Assistant, the multi-agent application built in Strands in [agentcore_memory.ipynb](agentcore_memory.ipynb).
+
+- **Option 1**: See [option_1_agentcore_memory_with_strands_agents_hooks.ipynb](option_1_agentcore_memory_with_strands_agents_hooks.ipynb) for the hooks-based approach
+- **Option 2**: See [option_2_agentcore_memory_with_strands_session_manager.ipynb](option_2_agentcore_memory_with_strands_session_manager.ipynb) for the session manager approach
+
+Choose Option 1 for maximum flexibility or learning, or Option 2 for simplicity and convenience.
