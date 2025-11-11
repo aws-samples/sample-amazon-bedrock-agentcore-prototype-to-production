@@ -50,8 +50,7 @@ operations. This is ideal if you need custom logic or specific behavior for your
 
 **Option 2: Using AgentCore Memory Session Manager**
 
-This approach uses the [AgentCore Memory Session Manager](https://strandsagents.com/latest/documentation/docs/community/session-managers/agentcore-memory/), which provides a sensible default implementation
-that's quick to set up and easy to use.
+This approach uses the [AgentCore Memory Session Manager](https://strandsagents.com/latest/documentation/docs/community/session-managers/agentcore-memory/), which is quick to set up and easy to use.
 
 ## Getting Started
 
