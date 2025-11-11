@@ -50,7 +50,7 @@ operations. This is ideal if you need custom logic or specific behavior for your
 
 **Option 2: Using AgentCore Memory Session Manager**
 
-This approach uses the [AgentCore Memory Session Manager](https://strandsagents.com/latest/documentation/docs/community/session-managers/agentcore-memory/), which is quick to set up and easy to use.
+This approach uses the [AgentCore Memory Session Manager](https://strandsagents.com/latest/documentation/docs/community/session-managers/agentcore-memory/), which is quick to set up and easy to use. It's automatic and transparent - developers don't need to manually manage memory operations. The session manager handles everything through Strands' lifecycle hooks. On the flip side, you will need to learn how Strands Agents and AgentCore Memory Session Manager work under the hood.
 
 ## Getting Started
 
