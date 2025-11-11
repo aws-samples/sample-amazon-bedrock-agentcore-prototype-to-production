@@ -13,7 +13,7 @@ AgentCore Memory provides:
 * Semantic Search: Vector-based retrieval of relevant memories using natural language queries
 
 ## How AgentCore Memory Works
-![high_level_memory.png](images/high_level_memory.png)
+![option-1-high_level_memory.png](images/option-1-high_level_memory.png)
 
 ### Short-Term Memory
 
